@@ -1,0 +1,655 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #151515;
+  font-family: "Space Grotesk", sans-serif;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.global-container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.6s ease-out forwards;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.logo-social {
+  display: flex;
+}
+
+.logo-social a {
+  margin: 0 32px;
+}
+
+.logo-social svg {
+  width: 24px;
+  height: 24px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(3.5rem, 8vw, 8.8rem);
+  line-height: clamp(4rem, 8vw, 8.8rem);
+  letter-spacing: -2.5px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  line-height: clamp(3.5rem, 6vw, 6.5rem);
+  letter-spacing: -2.5px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+h2 span {
+  position: relative;
+}
+
+h2 span::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #4ee1a0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+  line-height: clamp(2rem, 2.8vw, 2.8rem);
+  color: #d9d9d9;
+}
+
+.portfolio {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.444444px;
+}
+
+.hero-profile {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+
+.profile-presentation {
+  width: 60%;
+}
+
+.profile-presentation .pattern-ring {
+  width: 530px;
+  position: absolute;
+  top: 133px;
+  left: -215px;
+  overflow: hidden;
+}
+
+.profile-description {
+  position: absolute;
+  top: 198px;
+  z-index: 4;
+}
+
+.profile-description p {
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+  width: 50%;
+  margin: 43px 0 66px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.profile-photo {
+  width: 40%;
+  position: relative;
+  background-color: #282828;
+  background-image: url("assets/images/portfolio.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.pattern-circle {
+  width: 130px;
+  position: absolute;
+  bottom: 70px;
+  left: -65px;
+  overflow: hidden;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 2.6rem;
+  letter-spacing: 2.28571px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.8s 0.7s ease-out forwards;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #4ee1a0;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.hero-hr {
+  margin-top: calc(100vh + 50px);
+}
+
+.techno-experience {
+  position: relative;
+  padding-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.techno-experience .pattern-ring {
+  width: 530px;
+  position: absolute;
+  bottom: 0;
+  right: -215px;
+  overflow: hidden;
+}
+
+.techno {
+  width: 33%;
+  margin-bottom: 58px;
+}
+
+.techno h3 {
+  margin-bottom: 14px;
+}
+
+.projects {
+  margin-top: 80px;
+}
+
+.header-projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: clamp(24px, 3vw, 30px);
+  margin-top: 80px;
+}
+
+.project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+
+.project-container:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.project-image {
+  width: 100%;
+  height: 60%;
+}
+
+.project-techno {
+  height: 40%;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: #d9d9d9;
+}
+
+.audiophile {
+  width: 100%;
+  height: 400px;
+  background-image: url("assets/images/audiophile.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.entertainment {
+  width: 100%;
+  height: 400px;
+  background-image: url("assets/images/thumbnail-project-4-large.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.project-image:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 5, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 3;
+  opacity: 0;
+}
+
+.project-info {
+  margin-top: 20px;
+}
+
+.project-info h4 {
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.project-links{
+  display: none;
+}
+
+.link-project {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 2.28571px;
+  color: #ffffff;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4ee1a0;
+}
+
+.link-project:hover {
+  color: #4ee1a0;
+}
+
+#contact {
+  background: #242424;
+  padding: 84px 0 92px;
+  position: relative;
+}
+
+.global-contact-container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 92px;
+}
+
+.contact-info {
+  width: 40%;
+  position: relative;
+}
+
+#contact .pattern-ring {
+  width: 530px;
+  position: absolute;
+  top: 327px;
+  left: -300px;
+}
+
+.contact-info h1 {
+  margin-bottom: 36px;
+}
+
+form {
+  width: 40%;
+  position: relative;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  line-height: 2.6rem;
+  letter-spacing: -0.222222px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+textarea {
+  font-family: "Space Grotesk", sans-serif;
+  height: 100px;
+}
+
+.icon-input-container {
+  position: relative;
+}
+
+.icone-verif {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ff6f5b;
+  color: #ff6f5b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.error-msg {
+  display: none;
+  font-size: 1.2rem;
+  color: #ff6f5b;
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+}
+
+form button {
+  float: right;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 2.28571px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #4ee1a0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+form button:hover {
+  color: #4ee1a0;
+}
+
+form.shake{
+  animation: shake 0.4s;
+}
+
+.techno {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: 
+  opacity 0.5s 0.1s ease-out, 
+  transform 0.5s 0.1s ease-out;
+}
+
+.header-projects,
+.project-container {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 
+  opacity 0.5s 0.1s ease-out, 
+  transform 0.5s 0.1s ease-out;
+}
+
+.contact-container {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: 
+  opacity 0.5s 0.1s ease-out, 
+  transform 0.5s 0.1s ease-out;
+}
+
+.techno.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header-projects.active,
+.project-container.active, .contact-container.active{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes shake{
+  33% {
+      transform: translateX(-5px);
+  }
+  66%{
+      transform: translateX(5px);
+  }
+}
+
+@keyframes apparition {
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 1150px) {
+  header, footer, .profile-presentation, .techno-experience {
+    padding-left: 4vw;
+  }
+  #contact {
+    padding: 84px 4vw 92px;
+  }
+  .projects {
+    padding: 0 4vw;
+  }
+  hr{
+    margin: 0 4vw;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .link::after{
+    width: 100%;
+  }
+
+  .techno {
+    width: 50%;
+  }
+
+  .projects-grid-container {
+    margin-top: 60px;
+  }
+
+  .audiophile {
+    height: 250px;
+  }
+
+  .entertainment {
+    height: 250px;
+  }
+
+  .overlay{
+    display: none;
+  }
+
+  .project-links{
+    display: flex;
+    margin-top: 20px;
+    font-size: 1.6rem;
+  }
+
+  .project-links a:first-child{
+    margin-right: 32px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact {
+    padding: 60px 0 40px;
+  }
+
+  #contact .pattern-ring { 
+    top: 547px;
+    left: -350px;
+  }
+
+  .contact-info {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .contact-info h1{
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  header{
+    padding-top: 20px;
+  }
+
+  .portfolio {
+    font-size: 2rem;
+  }
+
+  .logo-social img {
+    width: 19px;
+    height: 19px;
+  }
+
+  .logo-social a {
+    margin: 0 15px;
+  }
+
+  .hero-profile {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-presentation{
+    width: 100%;
+    text-align: center;
+    padding-right: 4vw;
+  }
+
+  .profile-photo{
+    width: 250px;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+  .pattern-circle {
+    display: none;
+  }
+
+  .profile-description {
+    position: relative;
+    top: 0;
+    z-index: 4;
+  }
+
+  .profile-description p{
+    width: 100%;
+    margin: 20px 0 24px;
+  }
+
+  .techno {
+    width: 100%;
+    text-align: center;
+  }
+
+  .projects-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+
+}
