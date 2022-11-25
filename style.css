@@ -266,7 +266,9 @@ h4 {
 
 .project-image {
   width: 100%;
-  height: 60%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
 }
 
 .project-techno {
@@ -278,27 +280,15 @@ h4 {
 }
 
 .audiophile {
-  width: 100%;
-  height: 400px;
   background-image: url("assets/images/audiophile.png");
-  background-position: center;
-  background-size: cover;
 }
 
 .entertainment {
-  width: 100%;
-  height: 400px;
   background-image: url("assets/images/thumbnail-project-4-large.webp");
-  background-position: center;
-  background-size: cover;
 }
 
 .porshe {
-  width: 100%;
-  height: 400px;
   background-image: url("assets/images/animations.png");
-  background-position: center;
-  background-size: cover;
 }
 
 .project-image:hover .overlay {
@@ -543,11 +533,7 @@ form.shake{
     margin-top: 60px;
   }
 
-  .audiophile {
-    height: 250px;
-  }
-
-  .entertainment {
+  .project-image {
     height: 250px;
   }
 
